@@ -62,7 +62,7 @@ impl SpotlightManager {
     pub fn show(&self, window: &Window<Wry>) -> Result<(), Error> {
         if !window.is_visible().map_err(|_| Error::FailedToCheckWindowVisibility)? {
             // position_window_at_the_center_of_the_monitor_with_cursor(&window).unwrap();
-            println!("hihi")
+            println!("hihi");
             set_previous_app(&window, get_frontmost_app_path())?;
             window.set_focus().map_err(|_| Error::FailedToShowWindow)?;
         }
